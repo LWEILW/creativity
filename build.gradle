@@ -47,13 +47,33 @@ dependencies {
     compile 'com.baomidou:mybatis-plus-boot-starter:2.2.0'
     compile 'org.apache.velocity:velocity:1.7'
     compile 'com.github.pagehelper:pagehelper-spring-boot-starter:1.2.3'
-
-
+    
     //mySql
     compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
 
 }
 
 
+//mybatis generator plugin ------ start
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.arenagod.gradle:mybatis-generator-plugin:1.4"
+    }
+}
 
+apply plugin: "com.arenagod.gradle.MybatisGenerator"
 
+configurations {
+    mybatisGenerator
+}
+
+mybatisGenerator {
+    verbose = true
+    configFile = 'src/main/resources/generator/generatorConfig.xml'
+}
+//mybatis generator plugin ------ end
