@@ -9,7 +9,5 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
-    List<User> userList();
-
-    String userName(@Param("id") int id);
+    User getUserById(@Param("id") int id);
 }

@@ -6,7 +6,5 @@ import java.util.List;
 
 public interface UserServer {
 
-    List<User> userList();
-
-    String userName(int id);
+    User getUserById(int id);
 }

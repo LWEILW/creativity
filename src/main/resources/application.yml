@@ -1,0 +1,19 @@
+db: test
+server:
+  port: 8889
+
+spring:
+  profiles:
+    active: dev
+    include: mybatisplus
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.196.72.164:3306/${db}
+    username: root
+    password: 123456
+
+
+
+
+

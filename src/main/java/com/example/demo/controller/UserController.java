@@ -17,18 +17,11 @@ public class UserController {
     @Autowired
     private UserServer userServer;
 
-    @PostMapping("/userList")
-    public void userList() {
-        List<User> users = userServer.userList();
-        for (Object o : users) {
-            System.out.println(o);
-        }
-    }
 
     @GetMapping("/userDetail")
     public void userDetail() {
-        String name = userServer.userName(1);
-        System.out.println(name);
+        User user = userServer.getUserById(1);
+        System.out.println(user);
         System.out.println("I can write code!");
     }
 
