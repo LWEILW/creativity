@@ -51,6 +51,11 @@ dependencies {
     //mySql
     compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
 
+    //生成word文件
+    compile group: 'cn.afterturn', name: 'easypoi-base', version: '3.0.3'
+    compile group: 'cn.afterturn', name: 'easypoi-web', version: '3.0.3'
+    compile group: 'cn.afterturn', name: 'easypoi-annotation', version: '3.0.3'
+
 }
 
 
@@ -77,3 +82,4 @@ mybatisGenerator {
     configFile = 'src/main/resources/generator/generatorConfig.xml'
 }
 //mybatis generator plugin ------ end
+
