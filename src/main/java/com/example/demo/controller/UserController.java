@@ -1,7 +1,5 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.ItemIntroduce;
-import com.example.demo.entity.User;
 import com.example.demo.server.ItemServer;
 import com.example.demo.server.UserServer;
 import com.example.demo.util.WorderToNewWordUtils;
